@@ -1,6 +1,3 @@
-// import React from 'react';
-// import '../Styles/Parkingspace.css'; // Import the CSS file
-
 //ParkingSpace.js
 import React from "react";
 import "../Styles/Parkingspace.css";
