@@ -1,57 +1,102 @@
-.signup-wrapper {
-    background: #ffffff; /* White background for the signup form */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    margin: auto; /* Center the form */
-    margin-top: 50px; /* Space from the top */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.signup-form {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+/* Container */
+.signup-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Heading */
+.signup-form h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #004080;
+}
+
+/* Form Group */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.2rem;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-input {
-    padding: 12px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.3s;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-input:focus {
-    border-color: #80bdff;
+.form-group input:focus,
+.form-group select:focus {
     outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 4px rgba(0, 64, 128, 0.3);
 }
 
-button {
-    padding: 12px;
-    background-color: #007bff;
+/* Submit Button */
+.signup-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: white;
+    background-color: #004080;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+.signup-btn:hover {
+    background-color: #003366;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .signup-container {
+        padding: 1.5rem;
+    }
+
+    .signup-form h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .signup-btn {
+        font-size: 1rem;
+    }
 }
