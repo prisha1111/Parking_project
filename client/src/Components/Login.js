@@ -1,8 +1,31 @@
-import React from 'react'
-
+import React, {useState} from 'react'
+import axios from 'axios';
 import "../Styles/Login.css"
 
 const Login = () => {
+
+    const [credentials, setCredentials] = useState({
+        email: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setCredentials({ ...credentials, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:5000/api/login', credentials);
+            localStorage.setItem('token', response.data.token);
+            alert('Login successful');
+        } catch (error) {
+            console.error(error);
+            alert('Error logging in');
+        }
+    };
+
     return (
         <div class="login-page">
     <div class="form-container">
