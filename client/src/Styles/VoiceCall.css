@@ -1,0 +1,268 @@
+/* Voice Call Styles */
+.voice-call-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.voice-call-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.voice-call-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.voice-call-header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Call Interface */
+.call-interface {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Users List */
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-item span {
+    font-weight: 500;
+}
+
+/* Buttons */
+.call-btn, .accept-btn, .reject-btn, .end-call-btn, .retry-btn, .audio-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.call-btn {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+}
+
+.call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.accept-btn {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    margin-right: 1rem;
+}
+
+.accept-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.reject-btn {
+    background: linear-gradient(45deg, #f44336, #da190b);
+    color: white;
+}
+
+.reject-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+.end-call-btn {
+    background: linear-gradient(45deg, #f44336, #da190b);
+    color: white;
+}
+
+.end-call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+.retry-btn {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    color: white;
+}
+
+.retry-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+.audio-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-btn.enabled {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+}
+
+.audio-btn.disabled {
+    background: linear-gradient(45deg, #f44336, #da190b);
+}
+
+.audio-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Call Status Animations */
+.calling-animation, .ringing-animation, .connecting-animation {
+    font-size: 4rem;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Call Status Layouts */
+.call-status, .incoming-call, .error-message {
+    text-align: center;
+}
+
+.call-status p, .incoming-call p, .error-message p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.call-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Connected Call Interface */
+.call-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.call-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.connected-indicator {
+    font-size: 1.5rem;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.5; }
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .voice-call-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .voice-call-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .call-interface {
+        padding: 1.5rem;
+    }
+    
+    .user-item {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .call-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .control-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .calling-animation, .ringing-animation, .connecting-animation {
+        font-size: 3rem;
+    }
+}
+
+/* Error State */
+.call-interface.error {
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Incoming Call State */
+.call-interface.incoming {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(76, 175, 80, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(76, 175, 80, 0.6); }
+}
+
+/* Connected State */
+.call-interface.connected {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Calling State */
+.call-interface.calling {
+    background: rgba(33, 150, 243, 0.1);
+    border: 1px solid rgba(33, 150, 243, 0.3);
+}

@@ -6,6 +6,7 @@ import Footer from "./Components/Footer"
 // import Signup from "./Components/Signup"
 import Parkingspace from "./Components/Parkingspace"
 import ParkingSpaceManager from "./Components/Parkingspacemanager"; // Import the new component
+import VoiceCall from "./Components/VoiceCall"; // Import the voice call component
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <Signup/> */}
       <Parkingspace/>
       <ParkingSpaceManager/>
+      <VoiceCall/>
       <Footer/>
     </div>
     
